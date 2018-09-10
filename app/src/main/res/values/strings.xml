@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Deutsch Lernen</string>
+    <string name="germany_learning">Nu lernen wir Deutsch</string>
+    <string name="background_flag">Background Germany flag</string>
+    <string name="hard_mode">Hard mode</string>
+    <string name="start_button">Start</string>
+
+    <string-array name="learning_subjects">
+        <item>Mir Worten</item>
+        <item>kohta 2</item>
+        <item>kohta 3</item>
+        <item>kohta 4</item>
+        <item>kohta 5</item>
+        <item>kohta 6</item>
+        <item>kohta 7</item>
+        <item>kohta 8</item>
+        <item>kohta 9</item>
+        <item>kohta 10</item>
+    </string-array>
+
+</resources>
