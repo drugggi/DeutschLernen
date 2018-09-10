@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyStoredWordsActivity"></activity>
+        <activity android:name=".MyStoredWordsActivity" />
+        <activity android:name=".MyStoredWordsQuestionsActivity"></activity>
     </application>
 
 </manifest>

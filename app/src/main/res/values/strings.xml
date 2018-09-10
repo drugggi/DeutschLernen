@@ -4,6 +4,7 @@
     <string name="background_flag">Background Germany flag</string>
     <string name="hard_mode">Hard mode</string>
     <string name="start_button">Start</string>
+    <string name="new_question">New Question</string>
 
     <string-array name="learning_subjects">
         <item>Mir Worten</item>
@@ -16,6 +17,56 @@
         <item>kohta 8</item>
         <item>kohta 9</item>
         <item>kohta 10</item>
+    </string-array>
+
+    <string-array name="my_stored_subjects">
+        <item>Tag 1</item>
+        <item>tag 2</item>
+        <item>tag 3</item>
+        <item>tag 4</item>
+        <item>ta 5</item>
+        <item>kohta 6</item>
+        <item>kohta 7</item>
+        <item>kohta 8</item>
+        <item>kohta 9</item>
+        <item>kohta 10</item>
+    </string-array>
+
+    <string-array name="test_questions">
+        <item>Vorwort				;	johdanto, esipuhe</item>
+        <item>das Leben			;	elämä, henki</item>
+        <item>stelle				;	säätää, panna, laittaa</item>
+        <item>die Ergänzung		;	täydennys, liite</item>
+        <item>steuern 			;	ohjata, ajaa</item>
+        <item>der Rechner			;	laskin</item>
+        <item>verlagen			;	siirtää</item>
+        <item>Im vergangenen Jahr	;	viime vuonna</item>
+        <item> immer				;	aina</item>
+        <item>bezüglich			;	koskien</item>
+        <item>die Bedeutung		;	merkitys, tarkoitus, tärkeys</item>
+        <item>sollen				;	pitää, tulla</item>
+        <item>die Sicherheit		;	turvallisuus, varmuus</item>
+        <item>die Lücke			;	aukko</item>
+        <item>verantwortlich		;	jost vastuulline, vastuussa oleva</item>
+        <item>werden				;	aikoa tehdä jtak</item>
+        <item>galten				;	päteä jhk, koskea jkta, olla voimassa</item>
+        <item>überholt			;	vanhanaikainen, taantumuksellinen</item>
+        <item>weil				;	koska, sillä</item>
+        <item>die Entwicklung		;	kehittyminen</item>
+        <item>einige				;	muutamat, jokunen</item>
+        <item>halten				;	pitää, pidellä, kestää</item>
+        <item>die Treue			;	kuuliaisuus, lojaalisuus, uskollisuus, luotettavuus</item>
+        <item>schauen				;	katsella, nähdä</item>
+        <item>einzig				;	ainoa, yksi</item>
+        <item>entsprechend		;	samanlainen, vastaava, suhteessa</item>
+        <item>die Empfehlung		;	suositus</item>
+        <item>nennen				;	kutsua jkta jksk, nimittää jkta jksk</item>
+        <item>erscheinen			;	ilmestyä, tulla näkyviin</item>
+        <item>anwenden			;	käyttää</item>
+        <item>deaktivieren		;	tehdä toimintakyvyttömäksi, kytkeä pois päältä</item>
+        <item>kaum				;	tuskin</item>
+        <item>der Besuch			;	vierailu, käynti</item>
+        <item>verzichten			;	luopua jstak, luovuttaa, luopua</item>
     </string-array>
 
 </resources>
