@@ -3,36 +3,70 @@ package com.example.laakso.deutschlernen;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MyStoredWordsActivity extends AppCompatActivity {
 
-    ListView wordSubjectsListView;
-    Button startButton;
+    private ListView wordSubjectsListView;
+    private Button startButton;
+    private CheckBox hardModeCheckBox;
+    private StoredWordsAdapter subjectsAdapter;
+    private ArrayList<String[]> wordSubjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_stored_words);
 
-        String[] learningSubjects = getResources().getStringArray(R.array.my_stored_subjects);
-        startButton = (Button) findViewById(R.id.startButton);
+        wordSubjects.add(getResources().getStringArray(R.array.tag1) );
+        wordSubjects.add(getResources().getStringArray(R.array.tag2) );
+        wordSubjects.add(getResources().getStringArray(R.array.tag3) );
+        wordSubjects.add(getResources().getStringArray(R.array.tag4) );
 
+        String[] test;
+
+        String[] learningSubjects = getResources().getStringArray(R.array.my_stored_subjects);
+        // wordSubjects = getResources().getStringArray
+        startButton = (Button) findViewById(R.id.startButton);
+        hardModeCheckBox = (CheckBox) findViewById(R.id.hardModeCheckBox);
+
+        wordSubjectsListView = (ListView) findViewById(R.id.wordSubjectsListView);
+        subjectsAdapter = new StoredWordsAdapter(this, learningSubjects);
+        wordSubjectsListView.setAdapter(subjectsAdapter);
+
+        /*
         wordSubjectsListView = (ListView) findViewById(R.id.wordSubjectsListView);
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.learning_listview, R.id.textview , learningSubjects);
         wordSubjectsListView.setAdapter(adapter);
+*/
+
+        wordSubjectsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                subjectsAdapter.itemClicked(i);
+                subjectsAdapter.notifyDataSetChanged();
+            }
+        });
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MyStoredWordsActivity.this,"started",Toast.LENGTH_SHORT).show();
 
-                Intent myWordsQuestionsIntent = new Intent(view.getContext(), MyStoredWordsQuestionsActivity.class);
-                startActivity(myWordsQuestionsIntent);
+                if (hardModeCheckBox.isChecked() ) {
+
+                }
+                else {
+                    Intent myWordsQuestionsIntent = new Intent(view.getContext(), MyStoredWordsQuestionsEasyActivity.class);
+                    startActivity(myWordsQuestionsIntent);
+                }
             }
         });
     }

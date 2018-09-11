@@ -38,7 +38,10 @@
         <ListView
             android:id="@+id/wordSubjectsListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:choiceMode="multipleChoiceModal"
+            android:clickable="true"
+            android:listSelector="@android:color/background_light" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

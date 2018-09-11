@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
+public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
 
     private Button answer1Button;
     private Button answer2Button;
@@ -31,7 +31,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_stored_words_questions);
 
-        String[] questions = getResources().getStringArray(R.array.test_questions);
+        String[] questions = getResources().getStringArray(R.array.tag2);
         rng = new Random();
 
         allQuestionWords = new ArrayList<>();
@@ -65,7 +65,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
         }
 
         /*
-        Toast.makeText(MyStoredWordsQuestionsActivity.this,"size: " + allQuestionWords.size(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"size: " + allQuestionWords.size(),Toast.LENGTH_SHORT).show();
 
         for (int i = 0 ; i < allQuestionWords.size() ; i++ ) {
             Log.d("sana Saksa",allQuestionWords.get(i).get(0));
@@ -140,7 +140,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rightAnswerButtonIndex == 1) {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setTextColor(Color.YELLOW);
                     answer2Button.setText("");
                     answer3Button.setText("");
@@ -148,7 +148,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
                     printRightAnswer();
                 }
                 else {
-                   // Toast.makeText(MyStoredWordsQuestionsActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     //answer1Button.setBackgroundColor(Color.RED);
                     // answer1Button.setHighlightColor(Color.RED);
                     answer1Button.setTextColor(Color.RED);
@@ -160,7 +160,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rightAnswerButtonIndex == 2) {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setTextColor(Color.YELLOW);
                     answer3Button.setText("");
@@ -168,7 +168,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
                     printRightAnswer();
                 }
                 else {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer2Button.setTextColor(Color.RED);
                 }
             }
@@ -178,7 +178,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rightAnswerButtonIndex == 3) {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setText("");
                     answer3Button.setTextColor(Color.YELLOW);
@@ -186,7 +186,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
                     printRightAnswer();
                 }
                 else {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer3Button.setTextColor(Color.RED);
                 }
             }
@@ -197,7 +197,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rightAnswerButtonIndex == 4) {
-                    //Toast.makeText(MyStoredWordsQuestionsActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setText("");
                     answer3Button.setText("");
@@ -205,7 +205,7 @@ public class MyStoredWordsQuestionsActivity extends AppCompatActivity {
                     printRightAnswer();
                 }
                 else {
-                   // Toast.makeText(MyStoredWordsQuestionsActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer4Button.setTextColor(Color.RED);
                 }
             }

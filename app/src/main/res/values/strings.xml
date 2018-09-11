@@ -24,15 +24,10 @@
         <item>tag 2</item>
         <item>tag 3</item>
         <item>tag 4</item>
-        <item>ta 5</item>
-        <item>kohta 6</item>
-        <item>kohta 7</item>
-        <item>kohta 8</item>
-        <item>kohta 9</item>
-        <item>kohta 10</item>
+
     </string-array>
 
-    <string-array name="test_questions">
+    <string-array name="tag1">
         <item>Vorwort				;	johdanto, esipuhe</item>
         <item>das Leben			;	elämä, henki</item>
         <item>stelle				;	säätää, panna, laittaa</item>
@@ -47,7 +42,7 @@
         <item>sollen				;	pitää, tulla</item>
         <item>die Sicherheit		;	turvallisuus, varmuus</item>
         <item>die Lücke			;	aukko</item>
-        <item>verantwortlich		;	jost vastuulline, vastuussa oleva</item>
+        <item>verantwortlich		;	jst vastuullinen, vastuussa oleva</item>
         <item>werden				;	aikoa tehdä jtak</item>
         <item>galten				;	päteä jhk, koskea jkta, olla voimassa</item>
         <item>überholt			;	vanhanaikainen, taantumuksellinen</item>
@@ -67,6 +62,81 @@
         <item>kaum				;	tuskin</item>
         <item>der Besuch			;	vierailu, käynti</item>
         <item>verzichten			;	luopua jstak, luovuttaa, luopua</item>
+    </string-array>
+
+    <string-array name="tag2">
+        <item>die Zeit			;	aika, kausi</item>
+        <item>denn				;	sitten</item>
+        <item> wenn				;	milloin tahansa, koska vaan, joka kerta kun</item>
+        <item>übrig				;	muu, jäljellä oleva, loput</item>
+        <item>bleiben				;	jäädä, pysyä, viipyä</item>
+        <item>bieten				;	tarjota</item>
+        <item> dass				;	että</item>
+        <item>die Beschäftigung	;	puuha, touhu, työ, ammatti, ajanviete</item>
+        <item>damit				;	niin että, siten, jotta</item>
+        <item>nützlich			;	hyödyllinen, käytännöllinen</item>
+    </string-array>
+
+    <string-array name="tag3">
+        <item>und das alles		;	ja kaikki tämä</item>
+        <item>dabei				;	silloin, siinä tilanteessa</item>
+        <item>einfach				;	helppo, yksinkertainen</item>
+        <item>unabhängig			;	riippumaton, itsenäisesti</item>
+        <item>egal				;	yhdentekevä, samantekevä</item>
+        <item>nahezu 				;	lähes</item>
+        <item>die Oberfläche		;	pinta, pinta-ala</item>
+        <item>heutzutage			;	nykyään</item>
+        <item>unterstützen		;	tukea, kannattaa, auttaa</item>
+        <item>sofern				;	edellyttäen että, mikäli</item>
+        <item>uralte				;	ikivanha, kivikautinen, muinainen</item>
+        <item>verwenden			;	käyttää</item>
+        <item>beschränken			;	rajoittaa</item>
+        <item>unnötig				;	aiheeton, perusteeton, tarpeeton</item>
+        <item>etwa				;	noin, suunnilleen</item>
+        <item>der Fall			;	tapaus, putoaminen, kaatuminen</item>
+        <item>der Zusatz			;	lisääminen, lisäys</item>
+        <item>das Ding			;	tavara, asia</item>
+        <item>sonst				;	muuten, muussa tapauksessa</item>
+        <item>teuer				;	kallis</item>
+        <item>bewerkstelligen		;	vaikutus</item>
+        <item>die Stelle			;	paikka, kohta</item>
+        <item>der Rahmen			;	kehys, runko</item>
+        <item>hinaus				;	ulos, pois</item>
+        <item>die Fähigkeit		;	kyky, taito</item>
+        <item>benötigen			;	tarvita, vaatia</item>
+        <item>heiss				;	kuuma</item>
+        <item>wobei				;	jossa</item>
+        <item>der Spass			;	leikki, hupailu, pila</item>
+        <item>der Einstieg		;	merkintä</item>
+        <item>die Tür				;	door</item>
+        <item>das Tier			;	animal</item>
+    </string-array>
+
+    <string-array name="tag4">
+        <item>noch				;	vielä, lisäksi, enää, edelleen</item>
+        <item>kurz				;	lyhyt, lyhennys</item>
+        <item>Eckdaten			;	keskeiset tiedot</item>
+        <item>nach				;	näyttää, jälkeen, päästä</item>
+        <item>die Versicherung	;	vakuutus, vakuutusala</item>
+        <item> üblich				;	yleinen, tavallinen</item>
+        <item>als 				;	paitsi, kun, niin kuin</item>
+        <item>letzter				;	viimeinen, viime</item>
+        <item> der Sicherhei 		;	huuto</item>
+        <item>damit				;	niin että, siten, joten</item>
+        <item>erstellen			;	rakentaa, laatia, tehdä</item>
+        <item>schlagen			;	lyödä, vatkata</item>
+        <item>durch				;	läpi, kautta, halki</item>
+        <item>umfassen			;	napata, sulkea syliinsä, saartaa</item>
+        <item>die Tätigkeit		;	toiminta, toiminto, aktiivisuus</item>
+        <item>bewahren			;	suojella</item>
+        <item>sonst				;	muuten, muussa tapauksessa</item>
+        <item>geniessebar			;	maukas, syötävä, syömäkelpoinen</item>
+        <item>treiben				;	ajaa, karkottaa, hätistää, harjoitella, tehdä</item>
+        <item>verteidigen			;	puolustaa, kannattaa</item>
+        <item>das Büro			;	toimisto, virasto</item>
+        <item>das Eindringen		;	Tunkeutuminen</item>
+        <item>der Zwilling		;	kaksonen</item>
+        <item>stehen				;	seistä</item>
     </string-array>
 
 </resources>
