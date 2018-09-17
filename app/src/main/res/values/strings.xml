@@ -8,7 +8,7 @@
 
     <string-array name="learning_subjects">
         <item>Mir Worten</item>
-        <item>kohta 2</item>
+        <item>Epäsfe</item>
         <item>kohta 3</item>
         <item>kohta 4</item>
         <item>kohta 5</item>
@@ -24,10 +24,12 @@
         <item>tag 2</item>
         <item>tag 3</item>
         <item>tag 4</item>
-
+        <item>tag 5</item>
+        <item>Familie Worten</item>
     </string-array>
 
-    <string-array name="tag1">
+
+    <string-array name="tag_0">
         <item>Vorwort				;	johdanto, esipuhe</item>
         <item>das Leben			;	elämä, henki</item>
         <item>stelle				;	säätää, panna, laittaa</item>
@@ -64,7 +66,7 @@
         <item>verzichten			;	luopua jstak, luovuttaa, luopua</item>
     </string-array>
 
-    <string-array name="tag2">
+    <string-array name="tag_1">
         <item>die Zeit			;	aika, kausi</item>
         <item>denn				;	sitten</item>
         <item> wenn				;	milloin tahansa, koska vaan, joka kerta kun</item>
@@ -77,7 +79,7 @@
         <item>nützlich			;	hyödyllinen, käytännöllinen</item>
     </string-array>
 
-    <string-array name="tag3">
+    <string-array name="tag_2">
         <item>und das alles		;	ja kaikki tämä</item>
         <item>dabei				;	silloin, siinä tilanteessa</item>
         <item>einfach				;	helppo, yksinkertainen</item>
@@ -112,7 +114,7 @@
         <item>das Tier			;	animal</item>
     </string-array>
 
-    <string-array name="tag4">
+    <string-array name="tag_3">
         <item>noch				;	vielä, lisäksi, enää, edelleen</item>
         <item>kurz				;	lyhyt, lyhennys</item>
         <item>Eckdaten			;	keskeiset tiedot</item>
@@ -137,6 +139,80 @@
         <item>das Eindringen		;	Tunkeutuminen</item>
         <item>der Zwilling		;	kaksonen</item>
         <item>stehen				;	seistä</item>
+    </string-array>
+
+    <string-array name="tag_4">
+        <item>die Einleitung        ; aloittaminen, johdanto</item>
+        <item>das Kapitel           ; luku</item>
+        <item>klären                ; selventää, selvittää</item>
+        <item>folgend               ; jälkeen, seuraava</item>
+        <item>erleichtern           ; helpottaa, keventää</item>
+        <item>eng                   ; ahdas, kapea, tarkasti</item>
+        <item>verwenden              ; käyttää</item>
+        <item>sowie                 ; sekä</item>
+        <item>ergänzen              ; täydentää, lisätä</item>
+        <item>bieten                ; tarjota, tehdä tarjous</item>
+        <item>die Basis              ; perusta, pohja, alusta</item>
+        <item>entsprechend          ; samanlainen, vastaava, suhteessa</item>
+        <item>wenden                ; kääntää, osoittaa jk jklle</item>
+
+    </string-array>
+
+    <!-- Familie Worten -->
+    <string-array name="tag_5">
+        <item>die Familie           ; perhe</item>
+        <item>die Eltern            ; vanhemmat</item>
+        <item>der Vater             ; isä</item>
+        <item>die Mutter            ; äiti</item>
+        <item>das Kind              ; lapsi</item>
+        <item>der Sohn              ; poika</item>
+        <item>die Tochter               ; tytär</item>
+        <item>der Bruder             ; veli</item>
+        <item>die Schwester           ; sisko</item>
+        <item>die Geschwister           ; sisarukset</item>
+        <item>der Zwilling          ; kaksonen</item>
+        <item>die Stiefmutter       ; äitipuoli</item>
+        <item>der Stiefvater         ; isäpuoli</item>
+        <item>das ehepaar           ; aviopari</item>
+        <item>der Mann              ; aviomies</item>
+        <item>die Frau              ; aviovaimo</item>
+        <item>der Partner           ; kumppani</item>
+        <item>die Verwandten        ; sukulaiset</item>
+        <item>die Grosseltern       ; isovanhemmat</item>
+        <item>die Grossmutter        ; isoäiti</item>
+        <item>der Grossvater        ; isoisä  </item>
+        <item>das Enkelkind         ; lastenlapsi  </item>
+        <item>der Onkel             ; setä, eno</item>
+        <item>die Tante             ; täti</item>
+        <item>der Cousin            ; serkku(poika)</item>
+        <item>die Cousine           ; serkku(tyttö)</item>
+        <item>der Junge             ; poika</item>
+        <item>das Mädchen           ; tyttö</item>
+        <item>das Baby              ; vauva</item>
+        <item>der Freund            ; ystävä</item>
+        <item>die Schwiegermutter    ; anoppi</item>
+        <item>der Schwiegervate     ; appi</item>
+        <item>Der Familienstand     ; sivilisääty</item>
+        <item>verheiratet           ; avioliitossa</item>
+        <item>ledig                 ; naimaton</item>
+        <item>der/die Single        ; sinkku</item>
+        <item>verlobt               ; kihloissa</item>
+        <item>geschieden            ; eronnut</item>
+        <item>der Witwer            ; leski</item>
+        <item>die Ehe               ; avioliitto</item>
+        <item>die Lebensgemeinschaft        ; avoliitto</item>
+        <item>die Ehescheidung      ; avioero</item>
+    </string-array>
+
+    <string-array name="tag_6">
+        <item>test          ; test 1 , test 2</item>
+        <item>test2          ; test 13 , test 26</item>
+        <item>test 3         ; test 14 , test 223</item>
+        <item>test  4        ; test 1 5, test 23232</item>
+        <item>test   5       ; test 1 7, test 232</item>
+        <item>test    6      ; test 1 98, test 232</item>
+        <item>test     7     ; test 1 6, test 2123</item>
+
     </string-array>
 
 </resources>

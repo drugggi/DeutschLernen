@@ -1,5 +1,6 @@
 package com.example.laakso.deutschlernen;
 
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
     private int QandAindex;
     private ArrayList<ArrayList<String>> allQuestionWords;
     private int rightAnswerButtonIndex;
+    boolean[] includes;
 
     Random rng;
 
@@ -31,7 +33,7 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_stored_words_questions);
 
-        String[] questions = getResources().getStringArray(R.array.tag2);
+        String[] questions = getResources().getStringArray(R.array.tag_2);
         rng = new Random();
 
         allQuestionWords = new ArrayList<>();
@@ -41,7 +43,49 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         final String answerWord;
         String parts[];
 
-        for ( int i = 0 ; i < questions.length ; i++ ) {
+        Bundle extras = getIntent().getExtras();
+        if(extras !=null)
+        {
+            includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
+        }
+
+        ArrayList<String> tempQuestionLines = new ArrayList<>();
+        for (TypedArray item : ResourceHelper.getMultiTypedArray(MyStoredWordsQuestionsEasyActivity.this, "tag", includes)) {
+
+            for ( int j = 0 ; j < item.length() ; j++ ) {
+
+                tempQuestionLines.add(item.getString(j) );
+                Log.e("item", "length: " + item.getString(j));
+            }
+
+        }
+
+        for ( int i = 0 ; i < tempQuestionLines.size() ; i++ ) {
+            tempQuestionWords = new ArrayList<>();
+
+            // tempQuestionLines.set(i) = questions[i].replaceAll("//s+","");
+            tempQuestionLines.set(i, tempQuestionLines.get(i).replaceAll("//s+",""));
+
+            //parts = questions[i].split(";");
+            parts = tempQuestionLines.get(i).split(";");
+            if (parts.length == 2) {
+                tempQuestionWords.add(parts[0]);
+            }
+            else {
+                Log.e("ERROR","parts not 2");
+                continue;
+            }
+
+            parts = parts[1].split(",");
+
+            for ( int j = 0 ; j < parts.length ; j++ ) {
+                tempQuestionWords.add(parts[j]);
+            }
+
+            allQuestionWords.add(tempQuestionWords);
+        }
+
+/*        for ( int i = 0 ; i < questions.length ; i++ ) {
             tempQuestionWords = new ArrayList<>();
 
             questions[i] = questions[i].replaceAll("//s+","");
@@ -62,7 +106,7 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
             }
 
             allQuestionWords.add(tempQuestionWords);
-        }
+        }*/
 
         /*
         Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"size: " + allQuestionWords.size(),Toast.LENGTH_SHORT).show();
