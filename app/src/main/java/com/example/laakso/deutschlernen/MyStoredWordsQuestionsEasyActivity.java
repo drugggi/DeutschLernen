@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -31,9 +30,8 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_stored_words_questions);
+        setContentView(R.layout.activity_stored_words_easy_questions);
 
-        String[] questions = getResources().getStringArray(R.array.tag_2);
         rng = new Random();
 
         allQuestionWords = new ArrayList<>();
@@ -55,7 +53,6 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
             for ( int j = 0 ; j < item.length() ; j++ ) {
 
                 tempQuestionLines.add(item.getString(j) );
-                Log.e("item", "length: " + item.getString(j));
             }
 
         }

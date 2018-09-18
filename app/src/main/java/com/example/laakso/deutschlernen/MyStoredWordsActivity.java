@@ -74,6 +74,11 @@ public class MyStoredWordsActivity extends AppCompatActivity {
 
                 if (hardModeCheckBox.isChecked() ) {
 
+                    Intent hardWordsQuestionsIntent = new Intent(view.getContext(), MyStoredWordsQuestionsHardActivity.class);
+
+                    hardWordsQuestionsIntent.putExtra("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS",selectedItems);
+
+                    startActivity(hardWordsQuestionsIntent);
 
 
                 }

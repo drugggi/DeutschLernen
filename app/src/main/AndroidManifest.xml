@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyStoredWordsActivity" />
-        <activity android:name=".MyStoredWordsQuestionsEasyActivity"></activity>
+        <activity android:name=".MyStoredWordsQuestionsEasyActivity" />
+        <activity android:name=".MyStoredWordsQuestionsHardActivity"></activity>
     </application>
 
 </manifest>

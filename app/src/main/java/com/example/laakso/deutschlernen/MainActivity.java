@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         learningSubjectsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this,"jes",Toast.LENGTH_SHORT).show();
 
                 Intent myWordsIntent = new Intent(view.getContext(), MyStoredWordsActivity.class);
                 startActivity(myWordsIntent);
