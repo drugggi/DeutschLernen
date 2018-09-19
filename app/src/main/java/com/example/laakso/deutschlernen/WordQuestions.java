@@ -117,38 +117,77 @@ public class WordQuestions {
         if(answer.equals(correctAnswer)) {
             return 100;
         }
-        else {
 
-            // The shorter the correct word the bigger the punishment
-            // 50,33,25,20,16, 14, 12, 11, 10
-            int wrongFactor = 100 / correctSize;
+        // Lets check simple typos and give higher score if we find only few of them
+        else if (answerLength == correctSize) {
+            int typoAmount = checkTypoAmount(answer, correctAnswer);
 
-            // 0 is a perfect match
-            // 0,1,2,3,4,5,6,7
-            int answerDifference = answerLength - correctSize;
-            if (answerDifference < 0) {
-                answerDifference = answerDifference * -1;
+            if (typoAmount == 1) {
+                return 90;
+            }
+            else if (typoAmount == 2) {
+                return 75;
+            }
+            else {
+                return getRoughTotalScore(answerLength,correctSize,howCorrect);
             }
 
-            int sizeDifferencePunishment = answerDifference * wrongFactor;
-            int matchDifferencePunishment = (correctSize - howCorrect)*100 / correctSize;
-
-            int totalScore = 100 - sizeDifferencePunishment - matchDifferencePunishment;
-
-
-            Log.d("SDP",": " + sizeDifferencePunishment);
-            Log.d("MDP",": " + matchDifferencePunishment);
-            Log.d("TS",": " + totalScore);
-
-            if (totalScore < 0) {
-                return 0;
-            } else if (totalScore > 99) {
-                return 99;
-            }
-
-            return totalScore;
         }
 
+        else {
+
+            return getRoughTotalScore(answerLength,correctSize,howCorrect);
+        }
+
+    }
+
+    private int checkTypoAmount(String a, String b) {
+        if (a.length() != b.length() ) {
+            return 999;
+        }
+
+        int typo = 0;
+        for (int i = 0 ; i < a.length() ; i++) {
+
+            if (a.charAt(i) != b.charAt(i)) {
+                typo++;
+            }
+
+        }
+        return typo;
+    }
+
+    private int getRoughTotalScore(int answerLength, int correctSize, int howCorrect) {
+
+        if (howCorrect <= 2) { return 0; }
+
+        // The shorter the correct word the bigger the punishment
+        // 50,33,25,20,16, 14, 12, 11, 10
+        int wrongFactor = 100 / correctSize;
+
+        // 0 is a perfect match
+        // 0,1,2,3,4,5,6,7
+        int answerDifference = answerLength - correctSize;
+        if (answerDifference < 0) {
+            answerDifference = answerDifference * -1;
+        }
+
+        int sizeDifferencePunishment = answerDifference * wrongFactor;
+        int matchDifferencePunishment = (correctSize - howCorrect)*100 / correctSize;
+
+        int totalScore = 100 - sizeDifferencePunishment - matchDifferencePunishment;
+
+
+        Log.d("SDP",": " + sizeDifferencePunishment);
+        Log.d("MDP",": " + matchDifferencePunishment);
+        Log.d("TS",": " + totalScore);
+
+        if (totalScore < 0) {
+            return 0;
+        } else if (totalScore > 99) {
+            return 99;
+        }
+        return totalScore;
     }
 
     public int checkForRightAnswer(String answer) {

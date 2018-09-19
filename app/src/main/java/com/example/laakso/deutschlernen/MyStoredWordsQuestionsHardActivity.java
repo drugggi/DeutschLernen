@@ -105,6 +105,8 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                answerEditText.setText("");
+
                 String text = questions.newQuestion();
                 questionTextView.setText( text );
 

@@ -26,6 +26,7 @@
         <item>tag 4</item>
         <item>tag 5</item>
         <item>Familie Worten</item>
+        <item>die Nummern</item>
         <item>tag 6</item>
     </string-array>
 
@@ -174,7 +175,7 @@
         <item>der Zwilling          ; kaksonen</item>
         <item>die Stiefmutter       ; äitipuoli</item>
         <item>der Stiefvater         ; isäpuoli</item>
-        <item>das ehepaar           ; aviopari</item>
+        <item>das Ehepaar           ; aviopari</item>
         <item>der Mann              ; aviomies</item>
         <item>die Frau              ; aviovaimo</item>
         <item>der Partner           ; kumppani</item>
@@ -193,7 +194,7 @@
         <item>der Freund            ; ystävä</item>
         <item>die Schwiegermutter    ; anoppi</item>
         <item>der Schwiegervate     ; appi</item>
-        <item>Der Familienstand     ; sivilisääty</item>
+        <item>der Familienstand     ; sivilisääty</item>
         <item>verheiratet           ; avioliitossa</item>
         <item>ledig                 ; naimaton</item>
         <item>der Single        ; sinkku(mies)</item>
@@ -205,7 +206,67 @@
         <item>die Ehescheidung      ; avioero</item>
     </string-array>
 
+    <!-- German numbers -->
     <string-array name="tag_6">
+        <item>die Nummer    ; numero, luku             </item>
+        <item>null          ; 0 </item>
+        <item>eins          ; 1</item>
+        <item>zwei          ; 2</item>
+        <item>drei          ; 3</item>
+        <item>vier          ; 4</item>
+        <item>fünf          ; 5</item>
+        <item>sechs          ; 6</item>
+        <item>sieben          ; 7</item>
+        <item>acht          ; 8</item>
+        <item>neun          ; 9</item>
+        <item>zehn          ; 10</item>
+        <item>elf          ; 11</item>
+
+        <item>zwölf          ; 12</item>
+        <item>dreizehn          ; 13</item>
+        <item>vierzehn          ; 14</item>
+        <item>fünfzehn          ; 15</item>
+        <item>sechzehn          ; 16</item>
+        <item>siebzehn          ; 17</item>
+        <item>achtzehn          ; 18</item>
+        <item>neunzehn          ; 19</item>
+        <item>zwanzig          ; 20</item>
+        <item>einundzwanzig          ; 21</item>
+        <item>zweiundzwanzig          ; 22</item>
+        <item>dreiundzwanzig          ; 23</item>
+        <item>vierundzwanzig          ; 24</item>
+        <item>fünfundzwanzig          ; 25</item>
+        <item>sechsundzwanzig          ; 26</item>
+        <item>siebenundzwanzig          ; 27</item>
+        <item>achtundzwanzig          ; 28</item>
+        <item>neunundzwanzig          ; 29</item>
+        <item>dreissig          ; 30</item>
+        <item>einunddreissig          ; 31</item>
+        <item>zweiunddreissig          ; 32</item>
+        <item>vierzig          ; 40</item>
+        <item>fünfzig          ; 50</item>
+        <item>sechzig          ; 60</item>
+        <item>siebzig          ; 70</item>
+        <item>achtzig          ; 80</item>
+        <item>neunzig          ; 90</item>
+        <item>hundert          ; 100</item>
+        <item>hunderteins          ; 101</item>
+        <item>hundertvierundzwanzig          ; 125</item>
+        <item>zweihundert          ; 200</item>
+        <item>dreihundert          ; 300</item>
+        <item>neunhundertneunundneunzig          ; 999</item>
+        <item>tausend          ; 1000</item>
+        <item>tausendzwei          ; 1002</item>
+        <item>zweitausend          ; 2000</item>
+        <item>zehntausend          ; 10 000</item>
+        <item>hunderttausend          ; 100 000</item>
+        <item>eine Million          ; 1 000 000</item>
+        <item>vier Millionen          ; 4 000 000</item>
+        <item>eine Milliarde          ; 1 000 000 000</item>
+
+    </string-array>
+
+    <string-array name="tag_7">
         <item>test1  ; test1 ,test 2</item>
         <item>test2  ; test 2 , test 2</item>
         <item>test3         ; test 3 , test 223</item>
