@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class WordQuestions {
@@ -104,14 +105,48 @@ public class WordQuestions {
     }
 
     private int calculateCorrectAmount(String answer) {
-        int howCorrect;
+
         String correctAnswer = allQuestionWords.get(QandAindex).get(0);
+
+        int answerLength = answer.length();
+        int correctSize = allQuestionWords.get(QandAindex).get(0).length();
+        int howCorrect = getLongestCommonSubstring(answer,correctAnswer);
+
+        Log.d("correctness",answer + " ?= " + correctAnswer + "   howCorrect: "+ howCorrect);
 
         if(answer.equals(correctAnswer)) {
             return 100;
         }
         else {
-            return rng.nextInt(100);
+
+            // The shorter the correct word the bigger the punishment
+            // 50,33,25,20,16, 14, 12, 11, 10
+            int wrongFactor = 100 / correctSize;
+
+            // 0 is a perfect match
+            // 0,1,2,3,4,5,6,7
+            int answerDifference = answerLength - correctSize;
+            if (answerDifference < 0) {
+                answerDifference = answerDifference * -1;
+            }
+
+            int sizeDifferencePunishment = answerDifference * wrongFactor;
+            int matchDifferencePunishment = (correctSize - howCorrect)*100 / correctSize;
+
+            int totalScore = 100 - sizeDifferencePunishment - matchDifferencePunishment;
+
+
+            Log.d("SDP",": " + sizeDifferencePunishment);
+            Log.d("MDP",": " + matchDifferencePunishment);
+            Log.d("TS",": " + totalScore);
+
+            if (totalScore < 0) {
+                return 0;
+            } else if (totalScore > 99) {
+                return 99;
+            }
+
+            return totalScore;
         }
 
     }
@@ -156,6 +191,33 @@ public class WordQuestions {
 
         return TCABuilder.toString();
 
+    }
+
+    public static int getLongestCommonSubstring(String a, String b){
+        int m = a.length();
+        int n = b.length();
+
+        int max = 0;
+
+        int[][] dp = new int[m][n];
+
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(a.charAt(i) == b.charAt(j)){
+                    if(i==0 || j==0){
+                        dp[i][j]=1;
+                    }else{
+                        dp[i][j] = dp[i-1][j-1]+1;
+                    }
+
+                    if(max < dp[i][j])
+                        max = dp[i][j];
+                }
+
+            }
+        }
+
+        return max;
     }
 
 }
