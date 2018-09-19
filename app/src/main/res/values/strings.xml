@@ -26,6 +26,7 @@
         <item>tag 4</item>
         <item>tag 5</item>
         <item>Familie Worten</item>
+        <item>tag 6</item>
     </string-array>
 
 
@@ -111,7 +112,7 @@
         <item>der Spass			;	leikki, hupailu, pila</item>
         <item>der Einstieg		;	merkintä</item>
         <item>die Tür				;	door</item>
-        <item>das Tier			;	animal</item>
+        <item>das Tier			;	eläin</item>
     </string-array>
 
     <string-array name="tag_3">
@@ -205,13 +206,13 @@
     </string-array>
 
     <string-array name="tag_6">
-        <item>test          ; test 1 , test 2</item>
-        <item>test2          ; test 13 , test 26</item>
-        <item>test 3         ; test 14 , test 223</item>
-        <item>test  4        ; test 1 5, test 23232</item>
-        <item>test   5       ; test 1 7, test 232</item>
-        <item>test    6      ; test 1 98, test 232</item>
-        <item>test     7     ; test 1 6, test 2123</item>
+        <item>test1  ; test1 ,test 2</item>
+        <item>test2  ; test 2 , test 2</item>
+        <item>test3         ; test 3 , test 223</item>
+        <item>test4        ; test 4, test 23232</item>
+        <item>test5       ; test 5, test 232</item>
+        <item>test6      ; test 6, test 232</item>
+        <item>test7     ; test 7, test 2123</item>
 
     </string-array>
 

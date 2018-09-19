@@ -26,6 +26,8 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
     private int rightAnswerButtonIndex;
     boolean[] includes;
 
+    private WordQuestions questions;
+
     Random rng;
 
     @Override
@@ -34,8 +36,10 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stored_words_hard_questions);
 
         questionTextView = (TextView) findViewById(R.id.questionTextView);
+        correctAnswerTextView = (TextView) findViewById(R.id.correctAnswersTextView);
         answerEditText = (EditText) findViewById(R.id.answerEditText);
         newQuestionButton = (Button) findViewById(R.id.newQuestionButton);
+
         // correctAnswerTextView = (TextView) findViewById()
 
         rng = new Random();
@@ -52,6 +56,9 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
         {
             includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
         }
+
+        questions = new WordQuestions(MyStoredWordsQuestionsHardActivity.this, includes);
+/*
 
         ArrayList<String> tempQuestionLines = new ArrayList<>();
         for (TypedArray item : ResourceHelper.getMultiTypedArray(MyStoredWordsQuestionsHardActivity.this, "tag", includes)) {
@@ -91,21 +98,15 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
 
             allQuestionWords.add(tempQuestionWords);
         }
+*/
 
 
         newQuestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                QandAindex = rng.nextInt(allQuestionWords.size() );
 
-                StringBuilder questionBuilder = new StringBuilder();
-
-                for (int i = 1 ; i < allQuestionWords.get(QandAindex).size() ; i++) {
-                    questionBuilder.append(allQuestionWords.get(QandAindex).get(i) );
-                    questionBuilder.append(",");
-                }
-
-                questionTextView.setText(questionBuilder.toString() );
+                String text = questions.newQuestion();
+                questionTextView.setText( text );
 
             }
         });
@@ -115,7 +116,27 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 
                 String answer = answerEditText.getText().toString();
-                String correctAnswer = allQuestionWords.get(QandAindex).get(0);
+
+                int correctAmount = questions.checkForRightAnswer(answer);
+
+
+                if (correctAmount == 100) {
+                    Toast.makeText(MyStoredWordsQuestionsHardActivity.this, correctAmount + "% correct!", Toast.LENGTH_SHORT).show();
+                }
+                else if (correctAmount >= 50) {
+                    Toast.makeText(MyStoredWordsQuestionsHardActivity.this, "about " + correctAmount + "% correct", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(MyStoredWordsQuestionsHardActivity.this, "only " + correctAmount + "% correct", Toast.LENGTH_SHORT).show();
+                }
+
+                questions.getCorrectAmount();
+
+                String answerText = questions.getCorrectAnswer();
+                questionTextView.setText(answerText);
+
+                correctAnswerTextView.setText(questions.getTotalCorrectAmount() );
+  /*              String correctAnswer = allQuestionWords.get(QandAindex).get(0);
 
                 Log.d("ansewr","'" + answer + "'");
                 Log.d("correct answer","'" + correctAnswer + "'");
@@ -137,8 +158,8 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
                     correctAnswerBuilder.append(",");
                 }
 
-                questionTextView.setText(correctAnswerBuilder.toString() );
-                return false;
+                questionTextView.setText(correctAnswerBuilder.toString() );*/
+                return true;
             }
         });
 
