@@ -31,6 +31,16 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
     Random rng;
 
     @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putInt("totalCorrectScore",questions.getTotalCorrect() );
+        outState.putIntArray("totalCorrectArray",questions.getCorrectAmount() );
+
+
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stored_words_hard_questions);
@@ -58,47 +68,20 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
         }
 
         questions = new WordQuestions(MyStoredWordsQuestionsHardActivity.this, includes);
-/*
 
-        ArrayList<String> tempQuestionLines = new ArrayList<>();
-        for (TypedArray item : ResourceHelper.getMultiTypedArray(MyStoredWordsQuestionsHardActivity.this, "tag", includes)) {
+        if (savedInstanceState != null ) {
+            int score = savedInstanceState.getInt("totalCorrectScore");
+            int[] correctAmount = savedInstanceState.getIntArray("totalCorrectArray");
 
-            for ( int j = 0 ; j < item.length() ; j++ ) {
-
-                tempQuestionLines.add(item.getString(j) );
-            }
-
+            questions.setTotalCorrect(score);
+            questions.setCorrectAmount(correctAmount);
         }
 
-        for ( int i = 0 ; i < tempQuestionLines.size() ; i++ ) {
-            tempQuestionWords = new ArrayList<>();
+        answerEditText.setText("");
 
-            // tempQuestionLines.set(i) = questions[i].replaceAll("//s+","");
-            tempQuestionLines.set(i, tempQuestionLines.get(i).replaceAll("//s+",""));
-
-            Log.d("tempquestlines",tempQuestionLines.get(i) );
-
-            //parts = questions[i].split(";");
-            parts = tempQuestionLines.get(i).split(";");
-            if (parts.length == 2) {
-                parts[0] = parts[0].substring(0,(parts[0].length() - 1) );
-                tempQuestionWords.add(parts[0]);
-                Log.d("part[0]",parts[0]);
-            }
-            else {
-                Log.e("ERROR","parts not 2");
-                continue;
-            }
-
-            parts = parts[1].split(",");
-
-            for ( int j = 0 ; j < parts.length ; j++ ) {
-                tempQuestionWords.add(parts[j]);
-            }
-
-            allQuestionWords.add(tempQuestionWords);
-        }
-*/
+        String text = questions.newQuestion();
+        questionTextView.setText( text );
+        correctAnswerTextView.setText(questions.getTotalCorrectAmount() );
 
 
         newQuestionButton.setOnClickListener(new View.OnClickListener() {

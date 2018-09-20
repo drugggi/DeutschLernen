@@ -72,6 +72,47 @@ public class WordQuestions {
         rng = new Random();
     }
 
+    public int[] getCorrectAmount() {
+        return correctAmount;
+    }
+
+    public int getTotalCorrect() {
+        return totalCorrect;
+    }
+
+    public void setCorrectAmount(int[] correctAmount) {
+        this.correctAmount = correctAmount;
+    }
+
+    public void setTotalCorrect(int totalCorrect) {
+        this.totalCorrect = totalCorrect;
+    }
+
+    public void setCorrect() {
+        correctAmount[QandAindex] = 100;
+        totalCorrect = 100 + totalCorrect;
+    }
+
+    public String[] getWrongAnswers(int wrongAnswerAmount) {
+
+        String[] wrongAnswers = new String[wrongAnswerAmount];
+        // int[] wrongAnswersIndices = new int[wrongAnswerAmount];
+
+        for (int i = 0 ; i < wrongAnswers.length ; i++ ) {
+            int rngNumber = rng.nextInt(allQuestionWords.size() );
+            while (rngNumber == QandAindex ) {
+                rngNumber = rng.nextInt(allQuestionWords.size() );
+            }
+
+            // int randomAnsewrIndex = rng.nextInt(allQuestionWords.get(rngNumber).size() - 1) + 1;
+            // return allQuestionWords.get(randomIndex).get(randomAnsewrIndex);
+            wrongAnswers[i] = allQuestionWords.get(rngNumber).get(0);
+        }
+
+
+        return wrongAnswers;
+    }
+
     public String newQuestion() {
 
         QandAindex = rng.nextInt(allQuestionWords.size() );
@@ -100,9 +141,6 @@ public class WordQuestions {
         return questionBuilder.toString();
     }
 
-    public void getCorrectAmount() {
-        Log.d("Correct amount",": " + totalCorrect);
-    }
 
     private int calculateCorrectAmount(String answer) {
 
@@ -198,6 +236,10 @@ public class WordQuestions {
         correctAmount[QandAindex] = howCorrect;
 
         return howCorrect;
+    }
+
+    public String getAnswer() {
+        return allQuestionWords.get(QandAindex).get(0);
     }
 
     public String getCorrectAnswer() {

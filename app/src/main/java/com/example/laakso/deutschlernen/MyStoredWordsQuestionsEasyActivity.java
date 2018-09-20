@@ -20,17 +20,27 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
     private Button answer4Button;
     private Button newQuestionButton;
     private TextView questionTextView;
-    private int QandAindex;
-    private ArrayList<ArrayList<String>> allQuestionWords;
+    private TextView scoreTextView;
+    // private int QandAindex;
+    // private ArrayList<ArrayList<String>> allQuestionWords;
     private int rightAnswerButtonIndex;
-    boolean[] includes;
+    // boolean[] includes;
+
+    WordQuestions questions;
 
     Random rng;
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        super.onSaveInstanceState(outState);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stored_words_easy_questions);
+/*
 
         rng = new Random();
 
@@ -40,12 +50,21 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         String questionWord;
         final String answerWord;
         String parts[];
+*/
+
+        rng = new Random();
+
+        boolean[] includes;
 
         Bundle extras = getIntent().getExtras();
         if(extras !=null)
         {
             includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
+            questions = new WordQuestions(MyStoredWordsQuestionsEasyActivity.this,includes);
+
         }
+
+/*
 
         ArrayList<String> tempQuestionLines = new ArrayList<>();
         for (TypedArray item : ResourceHelper.getMultiTypedArray(MyStoredWordsQuestionsEasyActivity.this, "tag", includes)) {
@@ -80,7 +99,7 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
             }
 
             allQuestionWords.add(tempQuestionWords);
-        }
+        }*/
 
 /*        for ( int i = 0 ; i < questions.length ; i++ ) {
             tempQuestionWords = new ArrayList<>();
@@ -123,6 +142,9 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         newQuestionButton = (Button) findViewById(R.id.newQuestionButton);
 
         questionTextView = (TextView) findViewById(R.id.questionTextView);
+        scoreTextView = (TextView) findViewById(R.id.scoreTextView);
+
+        scoreTextView.setText(questions.getTotalCorrectAmount() );
 
         newQuestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,15 +154,24 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
                 answer3Button.setTextColor(Color.BLACK);
                 answer4Button.setTextColor(Color.BLACK);
 
-                QandAindex = rng.nextInt(allQuestionWords.size() );
-                rightAnswerButtonIndex = rng.nextInt(4)+1;
-                String randomWord;
+                String newQuestion = questions.newQuestion();
+                String rightAnswer = questions.getAnswer();
 
-                questionTextView.setText(allQuestionWords.get(QandAindex).get(0));
+                String[] allAnswers = questions.getWrongAnswers(4);
 
-                if (rightAnswerButtonIndex == 1) {
-                    int ansewrIndex = rng.nextInt(allQuestionWords.get(QandAindex).size() - 1) + 1;
-                    String rightAnswer = allQuestionWords.get(QandAindex).get(ansewrIndex);
+                questionTextView.setText(newQuestion);
+
+                rightAnswerButtonIndex = rng.nextInt(4);
+
+                allAnswers[rightAnswerButtonIndex] = rightAnswer;
+
+                answer1Button.setText(allAnswers[0]);
+                answer2Button.setText(allAnswers[1]);
+                answer3Button.setText(allAnswers[2]);
+                answer4Button.setText(allAnswers[3]);
+
+       /*         if (rightAnswerButtonIndex == 1) {
+
                     answer1Button.setText(rightAnswer);
                 }
                 else {
@@ -173,20 +204,21 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
                 }
                 else {
                     answer4Button.setText(getRandomWord() );
-                }
+                }*/
             }
         });
 
         answer1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswerButtonIndex == 1) {
+                if (rightAnswerButtonIndex == 0) {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setTextColor(Color.YELLOW);
                     answer2Button.setText("");
                     answer3Button.setText("");
                     answer4Button.setText("");
-                    printRightAnswer();
+                    questions.setCorrect();
+                    // printRightAnswer();
                 }
                 else {
                    // Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
@@ -194,42 +226,48 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
                     // answer1Button.setHighlightColor(Color.RED);
                     answer1Button.setTextColor(Color.RED);
                 }
+
+                scoreTextView.setText(questions.getTotalCorrectAmount() );
             }
         });
 
         answer2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswerButtonIndex == 2) {
+                if (rightAnswerButtonIndex == 1) {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setTextColor(Color.YELLOW);
                     answer3Button.setText("");
                     answer4Button.setText("");
-                    printRightAnswer();
+                    questions.setCorrect();
+                    //printRightAnswer();
                 }
                 else {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer2Button.setTextColor(Color.RED);
                 }
+                scoreTextView.setText(questions.getTotalCorrectAmount() );
             }
         });
 
         answer3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswerButtonIndex == 3) {
+                if (rightAnswerButtonIndex == 2) {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setText("");
                     answer3Button.setTextColor(Color.YELLOW);
                     answer4Button.setText("");
-                    printRightAnswer();
+                    questions.setCorrect();
+                   // printRightAnswer();
                 }
                 else {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer3Button.setTextColor(Color.RED);
                 }
+                scoreTextView.setText(questions.getTotalCorrectAmount() );
             }
         });
 
@@ -237,23 +275,26 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         answer4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rightAnswerButtonIndex == 4) {
+                if (rightAnswerButtonIndex == 3) {
                     //Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"That's right!",Toast.LENGTH_SHORT).show();
                     answer1Button.setText("");
                     answer2Button.setText("");
                     answer3Button.setText("");
                     answer4Button.setTextColor(Color.YELLOW);
-                    printRightAnswer();
+                    questions.setCorrect();
+                    // printRightAnswer();
                 }
                 else {
                    // Toast.makeText(MyStoredWordsQuestionsEasyActivity.this,"Wrong answer.",Toast.LENGTH_SHORT).show();
                     answer4Button.setTextColor(Color.RED);
                 }
+                scoreTextView.setText(questions.getTotalCorrectAmount() );
             }
         });
 
     }
 
+    /*
     private String getRandomWord() {
 
         int randomIndex = rng.nextInt(allQuestionWords.size());
@@ -275,5 +316,5 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
             answerTextBuilder.append(", ");
         }
         questionTextView.setText(answerTextBuilder.toString() );
-    }
+    }*/
 }
