@@ -11,7 +11,6 @@ import java.util.Random;
 
 public class WordQuestions {
 
-
     private ArrayList<ArrayList<String>> allQuestionWords;
 
     private int QandAindex;
@@ -71,6 +70,7 @@ public class WordQuestions {
 
         rng = new Random();
     }
+    
 
     public int[] getCorrectAmount() {
         return correctAmount;
@@ -98,11 +98,30 @@ public class WordQuestions {
         String[] wrongAnswers = new String[wrongAnswerAmount];
         // int[] wrongAnswersIndices = new int[wrongAnswerAmount];
 
+        ArrayList<Integer> answerIndices = new ArrayList<>();
+        answerIndices.add(QandAindex);
+
+
+        boolean foundSameIndex = false;
+
         for (int i = 0 ; i < wrongAnswers.length ; i++ ) {
             int rngNumber = rng.nextInt(allQuestionWords.size() );
-            while (rngNumber == QandAindex ) {
-                rngNumber = rng.nextInt(allQuestionWords.size() );
+
+            for (int j = 0 ; j < answerIndices.size() ; j++) {
+
+                if (rngNumber == answerIndices.get(j)) {
+
+                    foundSameIndex = true;
+                    break;
+                }
             }
+
+            if (foundSameIndex) {
+                i--;
+                foundSameIndex= false;
+                continue;
+            }
+            answerIndices.add(rngNumber);
 
             // int randomAnsewrIndex = rng.nextInt(allQuestionWords.get(rngNumber).size() - 1) + 1;
             // return allQuestionWords.get(randomIndex).get(randomAnsewrIndex);
