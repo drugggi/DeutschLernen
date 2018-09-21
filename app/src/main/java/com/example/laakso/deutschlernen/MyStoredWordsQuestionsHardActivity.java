@@ -1,9 +1,7 @@
 package com.example.laakso.deutschlernen;
 
-import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +24,7 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
     private int rightAnswerButtonIndex;
     boolean[] includes;
 
-    private WordQuestions questions;
+    private Questions questions;
 
     Random rng;
 
@@ -67,7 +65,8 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
             includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
         }
 
-        questions = new WordQuestions(MyStoredWordsQuestionsHardActivity.this, includes);
+        questions = new Questions();
+        questions.addQuestions(MyStoredWordsQuestionsHardActivity.this, includes);
 
         if (savedInstanceState != null ) {
             int score = savedInstanceState.getInt("totalCorrectScore");

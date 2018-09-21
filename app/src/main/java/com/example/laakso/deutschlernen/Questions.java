@@ -9,17 +9,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class WordQuestions {
+public class Questions {
 
-    private ArrayList<ArrayList<String>> allQuestionWords;
+    protected ArrayList<ArrayList<String>> allQuestionWords;
 
-    private int QandAindex;
-    private Random rng;
+    protected int QandAindex;
+    protected Random rng;
 
-    int[] correctAmount;
-    int totalCorrect;
+    protected int[] correctAmount;
+    protected int totalCorrect;
 
-    public WordQuestions(Context ctx, boolean[] includes) {
+    public Questions() {
+        rng = new Random();
+    }
+
+    public void addQuestions(Context ctx, boolean[] includes) {
 
         ArrayList<String> tempQuestionLines = new ArrayList<>();
         for (TypedArray item : ResourceHelper.getMultiTypedArray(ctx, "tag", includes)) {
@@ -32,7 +36,7 @@ public class WordQuestions {
         }
         correctAmount = new int[tempQuestionLines.size() ];
 
-      allQuestionWords = new ArrayList<>();
+        allQuestionWords = new ArrayList<>();
         String[] parts;
         for ( int i = 0 ; i < tempQuestionLines.size() ; i++ ) {
 
@@ -67,10 +71,8 @@ public class WordQuestions {
             allQuestionWords.add(tempQuestionWords);
         }
 
-
-        rng = new Random();
     }
-    
+
 
     public int[] getCorrectAmount() {
         return correctAmount;
@@ -88,49 +90,6 @@ public class WordQuestions {
         this.totalCorrect = totalCorrect;
     }
 
-    public void setCorrect() {
-        correctAmount[QandAindex] = 100;
-        totalCorrect = 100 + totalCorrect;
-    }
-
-    public String[] getWrongAnswers(int wrongAnswerAmount) {
-
-        String[] wrongAnswers = new String[wrongAnswerAmount];
-        // int[] wrongAnswersIndices = new int[wrongAnswerAmount];
-
-        ArrayList<Integer> answerIndices = new ArrayList<>();
-        answerIndices.add(QandAindex);
-
-
-        boolean foundSameIndex = false;
-
-        for (int i = 0 ; i < wrongAnswers.length ; i++ ) {
-            int rngNumber = rng.nextInt(allQuestionWords.size() );
-
-            for (int j = 0 ; j < answerIndices.size() ; j++) {
-
-                if (rngNumber == answerIndices.get(j)) {
-
-                    foundSameIndex = true;
-                    break;
-                }
-            }
-
-            if (foundSameIndex) {
-                i--;
-                foundSameIndex= false;
-                continue;
-            }
-            answerIndices.add(rngNumber);
-
-            // int randomAnsewrIndex = rng.nextInt(allQuestionWords.get(rngNumber).size() - 1) + 1;
-            // return allQuestionWords.get(randomIndex).get(randomAnsewrIndex);
-            wrongAnswers[i] = allQuestionWords.get(rngNumber).get(0);
-        }
-
-
-        return wrongAnswers;
-    }
 
     public String newQuestion() {
 

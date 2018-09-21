@@ -1,15 +1,12 @@
 package com.example.laakso.deutschlernen;
 
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
@@ -26,7 +23,7 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
     private int rightAnswerButtonIndex;
     // boolean[] includes;
 
-    WordQuestions questions;
+    QuestionsEasy questions;
 
     Random rng;
 
@@ -60,8 +57,8 @@ public class MyStoredWordsQuestionsEasyActivity extends AppCompatActivity {
         if(extras !=null)
         {
             includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
-            questions = new WordQuestions(MyStoredWordsQuestionsEasyActivity.this,includes);
-
+            questions = new QuestionsEasy();
+            questions.addQuestions(MyStoredWordsQuestionsEasyActivity.this,includes);
         }
 
 /*
