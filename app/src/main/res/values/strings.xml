@@ -9,7 +9,7 @@
     <string-array name="learning_subjects">
         <item>Mir Worten</item>
         <item>unregelmäßige verben</item>
-        <item>kohta 3</item>
+        <item>verb conjugation</item>
         <item>kohta 4</item>
         <item>kohta 5</item>
         <item>kohta 6</item>
@@ -27,6 +27,8 @@
         <item>tag 5</item>
         <item>Familie Worten</item>
         <item>die Nummern</item>
+        <item>unregelmäßige verben 1</item>
+        <item></item>
         <item>tag 6</item>
     </string-array>
 
@@ -267,6 +269,30 @@
     </string-array>
 
     <string-array name="tag_7">
+        <item>mennä             ; gehen, geht, ging, ist gegangen</item>
+        <item>olla          ; sein, ist, war, ist gewesen</item>
+        <item>syödä         ; essen, isst, ass, hat gegessen</item>
+        <item>omistaa       ; haben, hat, hatte, hat gehabt</item>
+        <item>ajaa, matkustaa       ; fahren, fährt, fuhr, ist gefahren</item>
+        <item>tulla         ; kommen, kommt, kam, ist gekommen</item>
+        <item>tulla jksk        ; werden, wirst, wird, ist geworden</item>
+        <item>puhua         ; sprechen, pricht, sprach, hat gesprochen</item>
+        <item>ajatella      ; denken, dankt, dachte, hat gedacht</item>
+        <item>tuntea        ; kennen, kennt, kannte, hat gekannt</item>
+        <item>tietää        ; wissen, weiss, wusste, hat gewusst</item>
+        <item>lukea             ; lesen, liest, las, hat gelesen</item>
+        <item>juosta        ; laufen, läuft, lief, ist gelaufen</item>
+        <item>kirjoittaa        ; schreiben, schreibt, schrieb, hat geschrieben</item>
+        <item>antaa         ; geben, gibt, gab, hat gegeben</item>
+        <item>täytyä        ; müssen, muss, musste, hat gemusst</item>
+        <item>seisoa        ; stehen, steht, stand, hat gestanden</item>
+        <item>tavata, kohdata       ; treffen, trifft, traf, hat gestroffen</item>
+        <item>ottaa             ; nehmen, nimmt, nahm, hat genommen</item>
+        <item>soittaa       ; anrufen, ruft an, rief an, hat angerufen</item>
+
+    </string-array>
+
+    <string-array name="tag_8">
         <item>test1  ; test1 ,test 2</item>
         <item>test2  ; test 2 , test 2</item>
         <item>test3         ; test 3 , test 223</item>
@@ -274,6 +300,66 @@
         <item>test5       ; test 5, test 232</item>
         <item>test6      ; test 6, test 232</item>
         <item>test7     ; test 7, test 2123</item>
+
+    </string-array>
+
+
+    <string-array name="tag_9">
+        <item>test1  ; test1 ,test 2</item>
+        <item>test2  ; test 2 , test 2</item>
+        <item>test3         ; test 3 , test 223</item>
+        <item>test4        ; test 4, test 23232</item>
+        <item>test5       ; test 5, test 232</item>
+        <item>test6      ; test 6, test 232</item>
+        <item>test7     ; test 7, test 2123</item>
+
+    </string-array>
+
+    <string-array name="personal_pronoun">
+        <item>ich ; minä</item>
+        <item>du ; sinä</item>
+        <item>er; hän (mies)</item>
+        <item>sie; hän (nainen)</item>
+        <item>es; se/hän (neutraali)</item>
+        <item>wir; me</item>
+        <item>ihr;te</item>
+        <item>sie; he</item>
+        <item>Sie; Te(teitittely)</item>
+
+    </string-array>
+
+
+    <string-array name="verb_conjucation_presens">
+        <item>bin, bist, ist, ist, ist, sind, seid, sind, sind ; olla</item>
+        <item>habe, hast, hat, hat, hat, haben, habt, haben, haben; omistaa</item>
+        <item>gehe, gehst, geht, geht, geht, gehen, geht, gehen, gehen; mennä</item>
+        <item>werde, wirst, wird, wird, wird, werden, werdet, werden, werden; aiko tehdä jtak</item>
+        <item>mache, machst, macht, macht, macht, machen, macht, machen, machen; tehdä</item>
+        <item>lese, liest, liest, liest, liest, lesen, lest, lesen, lesen; lukea </item>
+        <item>sehe, siehst, sieht, sieht, sieht, sehen, seht, sehen, sehen; nähdä </item>
+        <item>kommen, kommst, kommt, kommt, kommt, kommen, kommt, kommen, kommen; tulla</item>
+        <item>will, sillst, will, will, will, wollen, wollt, wollen; haluta, tahtoa</item>
+        <item>spreche, sprichst, spricht, spricht, spricht, sprechen, sprecht, sprechen, sprechen; puhua</item>
+        <item>nehme, nimmst, nimmt, nimmt, nimmt, nehmen, nehmt, nehmen, nehmen; ottaa, valita</item>
+        <item>weiss, weisst, weiss, weiss, weiss, wissen, wisst, wissen, wissen</item>
+        <item>arbeite, arbetest, arbeitet, arbeitet, arbeitet, arbeiten, arbeitet, arbeiten, arbeiten; tehdä työtä, työskennellä </item>
+        <item>schlafe, schläfst, schläft, schläft, schläft, schlafen, schalft, schlafen, schlafen ; nukkua, maata</item>
+        <item>laufe, läufst, läuft, läuft, läuft, laufen, lauft, laufen, laufen; nauraa</item>
+        <item>finde, findest, findet, findet, findet, finden, findet, finden, finden ; löytää, olla jotakin mieltä</item>
+        <item>bekomme, bekommst, bekommt, bekommt, bekommt, bekommen, bekommt, bekommen, bekommen; saada</item>
+        <item>treffe, triffst, trifft, trifft, trifft, treffen, trefft, treffen, treffen ; tavata</item>
+        <item>kann, kannst, kann, kann, kann, können, könnt, können, können ; voida tehdä jtk, kyetä tekemään tjk</item>
+        <item>sage, sagst, sagt, sagt, sagt, sagen, sagt, sagen, sagen ; sanoa, kertoa </item>
+        <item>beginne, beginnst, beginnt, beginnt, beginnt, beginnen, beginnt, beginnen, beginnen</item>
+        <item>trinke, trinkst, trinkt, trinkt, trinkt, trinken, trinkt, trinken, trinken; juoda</item>
+        <item>helfe, hilfst, hilft, hilft, hilft, helfen, helft, helfen, helfen ; auttaa</item>
+        <item>muss, musst, muss, muss, muss, müssen, müsst, müssen, müssen</item>
+        <item>finde, findest, findet, findet, findet, finden, findet, finden, finden ; löytää, olla jotakin mieltä</item>
+        <item>tue, tust, tut, tut, tut, tun, tut, tun, tun; tehdä, saada aikaan</item>
+        <item>sollte, solltest, solltet, solltet, solltet, sollten, solltet, sollten, sollten; pitää, tulla</item>
+        <item>gebe, gibst, gibt, gibt, gibt, geben, gebt, geben, geben ; antaa, jakaa</item>
+        <item>lasse, lässt, lässt, lässt, lässt, lassen, lasst, lassen, lassen; antaa, sallia, päästää</item>
+
 
     </string-array>
 
