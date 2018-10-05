@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MyStoredWordsActivity" />
         <activity android:name=".MyStoredWordsQuestionsEasyActivity" />
-        <activity android:name=".MyStoredWordsQuestionsHardActivity"></activity>
+        <activity android:name=".MyStoredWordsQuestionsHardActivity" />
+        <activity android:name=".VerbConjucateActivity"></activity>
     </application>
 
 </manifest>

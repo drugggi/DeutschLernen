@@ -3,6 +3,7 @@ package com.example.laakso.deutschlernen;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,8 +30,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Intent myWordsIntent = new Intent(view.getContext(), MyStoredWordsActivity.class);
-                startActivity(myWordsIntent);
+                if (i == 0) {
+                    Intent myWordsIntent = new Intent(view.getContext(), MyStoredWordsActivity.class);
+                    startActivity(myWordsIntent);
+                }
+                else if (i == 1) {
+                    Intent verbConjucatIntent = new Intent(view.getContext(), VerbConjucateActivity.class);
+                    startActivity(verbConjucatIntent);
+                }
             }
         });
 
