@@ -6,7 +6,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 
-public class QuestionsEasy extends Questions {
+public class QuestionsEasy extends QuestionsHard {
 
 
 

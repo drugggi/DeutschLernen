@@ -24,7 +24,7 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
     private int rightAnswerButtonIndex;
     boolean[] includes;
 
-    private Questions questions;
+    private QuestionsHard questions;
 
     Random rng;
 
@@ -65,7 +65,7 @@ public class MyStoredWordsQuestionsHardActivity extends AppCompatActivity {
             includes = extras.getBooleanArray("com.finn.laakso.deutschlernen.SELECTEDSUBJECTS");
         }
 
-        questions = new Questions();
+        questions = new QuestionsHard();
         questions.addQuestions(MyStoredWordsQuestionsHardActivity.this, includes);
 
         if (savedInstanceState != null ) {

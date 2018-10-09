@@ -8,8 +8,8 @@
 
     <string-array name="learning_subjects">
         <item>Mir Worten</item>
-        <item>unregelmäßige verben</item>
         <item>verb conjugation</item>
+        <item>unregelmäßige verben</item>
         <item>kohta 4</item>
         <item>kohta 5</item>
         <item>kohta 6</item>
@@ -322,7 +322,7 @@
         <item>sie; hän (nainen)</item>
         <item>es; se/hän (neutraali)</item>
         <item>wir; me</item>
-        <item>ihr;te</item>
+        <item>ihr; te</item>
         <item>sie; he</item>
         <item>Sie; Te (teitittely)</item>
 
@@ -338,22 +338,22 @@
         <item>lese, liest, liest, liest, liest, lesen, lest, lesen, lesen; lukea </item>
         <item>sehe, siehst, sieht, sieht, sieht, sehen, seht, sehen, sehen; nähdä </item>
         <item>kommen, kommst, kommt, kommt, kommt, kommen, kommt, kommen, kommen; tulla</item>
-        <item>will, sillst, will, will, will, wollen, wollt, wollen; haluta, tahtoa</item>
+        <item>will, willst, will, will, will, wollen, wollt, wollen; haluta, tahtoa</item>
         <item>spreche, sprichst, spricht, spricht, spricht, sprechen, sprecht, sprechen, sprechen; puhua</item>
         <item>nehme, nimmst, nimmt, nimmt, nimmt, nehmen, nehmt, nehmen, nehmen; ottaa, valita</item>
-        <item>weiss, weisst, weiss, weiss, weiss, wissen, wisst, wissen, wissen</item>
+        <item>weiss, weisst, weiss, weiss, weiss, wissen, wisst, wissen, wissen; tietää</item>
         <item>arbeite, arbetest, arbeitet, arbeitet, arbeitet, arbeiten, arbeitet, arbeiten, arbeiten; tehdä työtä, työskennellä </item>
         <item>schlafe, schläfst, schläft, schläft, schläft, schlafen, schalft, schlafen, schlafen ; nukkua, maata</item>
         <item>laufe, läufst, läuft, läuft, läuft, laufen, lauft, laufen, laufen; nauraa</item>
         <item>finde, findest, findet, findet, findet, finden, findet, finden, finden ; löytää, olla jotakin mieltä</item>
         <item>bekomme, bekommst, bekommt, bekommt, bekommt, bekommen, bekommt, bekommen, bekommen; saada</item>
         <item>treffe, triffst, trifft, trifft, trifft, treffen, trefft, treffen, treffen ; tavata</item>
-        <item>kann, kannst, kann, kann, kann, können, könnt, können, können ; voida tehdä jtk, kyetä tekemään tjk</item>
+        <item>kann, kannst, kann, kann, kann, können, könnt, können, können ; voida tehdä jtk, kyetä tekemään jtk</item>
         <item>sage, sagst, sagt, sagt, sagt, sagen, sagt, sagen, sagen ; sanoa, kertoa </item>
-        <item>beginne, beginnst, beginnt, beginnt, beginnt, beginnen, beginnt, beginnen, beginnen</item>
+        <item>beginne, beginnst, beginnt, beginnt, beginnt, beginnen, beginnt, beginnen, beginnen; aloittaa, alkaa</item>
         <item>trinke, trinkst, trinkt, trinkt, trinkt, trinken, trinkt, trinken, trinken; juoda</item>
         <item>helfe, hilfst, hilft, hilft, hilft, helfen, helft, helfen, helfen ; auttaa</item>
-        <item>muss, musst, muss, muss, muss, müssen, müsst, müssen, müssen</item>
+        <item>muss, musst, muss, muss, muss, müssen, müsst, müssen, müssen; täytyä</item>
         <item>finde, findest, findet, findet, findet, finden, findet, finden, finden ; löytää, olla jotakin mieltä</item>
         <item>tue, tust, tut, tut, tut, tun, tut, tun, tun; tehdä, saada aikaan</item>
         <item>sollte, solltest, solltet, solltet, solltet, sollten, solltet, sollten, sollten; pitää, tulla</item>
